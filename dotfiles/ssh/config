@@ -1,0 +1,82 @@
+Host orac
+    HostName orac.amt.edu.au
+    User adgold
+
+Host pip
+    HostName shell.srcf.net
+    User ag2198
+
+Host hpc
+    HostName login-icelake.hpc.cam.ac.uk
+    User ag2198
+    ControlMaster auto
+    ControlPath ~/.ssh/control-%C
+    ControlPersist 900
+
+Host login*.hpc.cam.ac.uk
+    ControlMaster auto
+    ControlPath ~/.ssh/control-%C
+    ControlPersist 900
+
+Host gate
+    HostName gate.eng.cam.ac.uk
+    User ag2198
+    ForwardAgent yes
+
+Host cblgpu06
+    HostName cblgpu06.eng.cam.ac.uk
+    User ag2198
+    ProxyJump gate
+    ForwardAgent yes
+    LocalForward 1234 localhost:1234
+
+Host euclid
+    HostName euclid.eng.cam.ac.uk
+    User ag2198
+    ProxyJump gate
+    ForwardAgent yes
+    LocalForward 1234 localhost:1234
+
+Host ulam
+    HostName ulam.eng.cam.ac.uk
+    User ag2198
+    ProxyJump gate
+    ForwardAgent yes
+
+Host hinton
+    HostName hinton.eng.cam.ac.uk
+    User ag2198
+    ProxyJump gate
+    ForwardAgent yes
+
+Host cblgpu07
+    HostName %h.eng.cam.ac.uk
+    User ag2198
+    ProxyJump gate
+    ForwardAgent yes
+    
+Host cblgpu??
+    HostName %h.eng.cam.ac.uk
+    User ag2198
+    ProxyJump gate
+    ForwardAgent yes
+
+Host server
+    HostName adgold.duckdns.org
+    User adrian
+    ForwardAgent yes
+
+Host remarkable
+    HostName 10.247.34.148
+    User root
+
+Host elwood
+    HostName 100.76.159.107
+    User adrian
+
+Host adrian-server
+    HostName adrian-server
+    User adrian
+
+Host *
+    ServerAliveInterval 60

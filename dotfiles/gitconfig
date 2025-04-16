@@ -1,0 +1,26 @@
+[core]
+    excludesfile = ~/.gitignore
+
+[user]
+	email = ad.goldwaser@gmail.com
+	name = Adrian Goldwaser
+	username = AdGold
+
+[push]
+	default = matching
+
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+
+[branch]
+	autoSetupRebase = always
+[init]
+	defaultBranch = main
+[url "git@github.com:"]
+	insteadOf = https://github.com
+
+[includeIf "exists:~/.gitconfig-maintenance"]
+    path = ~/.gitconfig-maintenance
