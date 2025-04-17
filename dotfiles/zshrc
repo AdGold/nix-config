@@ -146,8 +146,12 @@ bindkey '^[[B' down-line-or-search
 # }}}
 # Ranger cd {{{
 # Ranger needs locale set
-export LANGUAGE="en_US.UTF-8"
-export LC_ALL="en_US.UTF-8"
+if [ -d "$HOME/.nix-profile" ]; then
+  export LANG="en_US.UTF-8"
+  export LC_CTYPE="en_US.UTF-8"
+  export LC_ALL=""
+  export LOCALE_ARCHIVE="$HOME/.nix-profile/lib/locale/locale-archive"
+fi
 
 function zle-line-init zle-keymap-select {
     # VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"

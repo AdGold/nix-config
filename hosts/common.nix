@@ -30,5 +30,6 @@
     jq
     atool
     powerline-fonts
+    glibcLocales
   ];
 }
