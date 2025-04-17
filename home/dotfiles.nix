@@ -22,5 +22,12 @@ in
     ".config/kitty/dracula.conf".source = mkOutOfStoreLink "config/kitty/dracula.conf";
     ".ssh/config".source = mkOutOfStoreLink "ssh/config";
     ".scripts".source = mkOutOfStoreLink "scripts";
+    ".config/ranger/plugins/ranger_devicons".source = pkgs.fetchFromGitHub {
+      owner = "alexanderjeurissen";
+      repo = "ranger_devicons";
+      rev = "main";
+      sha256 = "0d0r4wy5y2fymclig7fqybbxiar7vd0rq55bscxq8656dxw7fkkj";
+    };
   };
+
 }
