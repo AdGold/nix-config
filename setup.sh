@@ -97,10 +97,5 @@ fi
 if [ "$profile" = "server" ]; then
     warn "Remember to configure the system OpenSSH server manually if needed (e.g., disable PasswordAuthentication in /etc/ssh/sshd_config)."
 fi
-default_shell=$(basename "$SHELL")
-if [ "$default_shell" != "zsh" ]; then
-    warn "Your default shell is not zsh, running chsh to change it to zsh." 
-    chsh -s $(which zsh)
-fi
 
 info "Setup/Activation complete for profile '$profile'."

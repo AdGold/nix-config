@@ -7,6 +7,7 @@ in
 {
   home.file = {
     ".zshrc".source = mkOutOfStoreLink "zshrc";
+    ".bash_profile".source = mkOutOfStoreLink "bash_profile";
     ".gitconfig".source = mkOutOfStoreLink "gitconfig";
     ".config/nvim".source = mkOutOfStoreLink "config/nvim";
     ".config/kitty/kitty.conf".source = mkOutOfStoreLink "config/kitty/kitty.conf";

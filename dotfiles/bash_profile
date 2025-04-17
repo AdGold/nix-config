@@ -1,0 +1,4 @@
+# Launch ZSH because Nix + HM can't update the shell
+if [ -x "$HOME/.nix-profile/bin/zsh" ] && [ "$SHELL" != "$HOME/.nix-profile/bin/zsh" ] && [ -z "$BASH_NO_ZSH" ]; then
+  exec "$HOME/.nix-profile/bin/zsh"
+fi
