@@ -2,7 +2,7 @@
 
 {
   home.username = "ag2198";
-  home.homeDirectory = "/home/ag2198";
+  home.homeDirectory = "/homes/ag2198";
 
   imports = [
     ./common.nix
